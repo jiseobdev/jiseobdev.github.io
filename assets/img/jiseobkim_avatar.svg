@@ -1,0 +1,31 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="glasses_rim_color" x1="0%" y1="0%" x2="100%" y2="100%">
+   <stop stop-color="#8b0000" offset="0%"/>
+   <stop stop-color="#a52a2a" offset="20%"/>
+   <stop stop-color="#ff4500" offset="40%"/>
+   <stop stop-color="#ffd700" offset="50%"/>
+   <stop stop-color="#ff4500" offset="60%"/>
+   <stop stop-color="#800000" offset="80%"/>
+   <stop stop-color="#8b0000" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <g shape-rendering="geometricPrecision">
+  <title>Avatar</title>
+  <rect id="skin" x="0" y="0" width="300" height="300" fill="#f9d6c3"/>
+  <!--<path fill="#352b23" d="m0,0l300,0l0,180l-119,0a25,25 0 0 1 -25,-25l0,-45l-12,0l0,45a25,25 0 0 1 -25,25l-119,0" id="hair_1"/>-->
+  <path id="hair_shadow" d="m0,0l7.5,7.5l300,0l0,180a150,70 0 0 1 -150,-70a150,70 0 0 1 -150,70l-7.5,0" fill="#000000" fill-opacity="0.3"/>
+  <path id="hair_2" d="m0,0l300,0l0,180a150,70 0 0 1 -150,-70a150,70 0 0 1 -150,70" fill="#352b23"/>
+  <path id="cheek_1" d="m50,250l0,-40a40,40 0 1 1 0,80a40,40 0 1 1 0,-80" fill="#ffa07a" fill-opacity="0.5"/>
+  <path id="cheek_2" d="m250,250l0,-40a40,40 0 1 1 0,80a40,40 0 1 1 0,-80" fill="#ffa07a" fill-opacity="0.5"/>
+  <path id="eye_1" d="m75,200l0,-37.5a37.5,37.5 0 1 1 0,75a37.5,37.5 0 1 1 0,-75" fill="#996622"/>
+  <path id="eye_2" d="m225,200l0,-36a37.5,37.5 0 1 1 0,75a37.5,37.5 0 1 1 0,-75" fill="#996622"/>
+  <path id="mouth" d="m130,250l30,0a10,5 0 0 0 10,-5" fill="none" stroke="#000" stroke-width="5"/>
+  <path id="glasses_shadow" d="m0,207.5l20,0a62.5,62.5 0 1 1 125,0l7.5,-7.5l10,0l7.5,7.5a62.5,62.5 0 1 1 125,0l12.5,0l-12.5,0a62.5,62.5 0 1 1 -125,0l-7.5,-7.5l-10,0l-7.5,7.5a62.5,62.5 0 1 1 -125,0" fill="none" stroke="#000000" stroke-opacity="0.3" stroke-width="5"/>
+  <path id="glasses_bridge" d="m137.5,200l7.5,-7.5l10,0l7.5,7.5" fill="none" stroke="#ffd700" stroke-width="5"/>
+  <path id="glasses_lens_1" d="m12.5,200a62.5,62.5 0 1 1 125,0a62.5,62.5 0 1 1 -125,0" fill="none" stroke="url(#glasses_rim_color)" stroke-width="5"/>
+  <path id="glasses_lens_2" d="m162.5,200a62.5,62.5 0 1 1 125,0a62.5,62.5 0 1 1 -125,0" fill="none" stroke="url(#glasses_rim_color)" stroke-width="5"/>
+  <path id="glasses_endpiece_1" d="m0,200l12.5,0" fill="none" stroke="#ffd700" stroke-width="5"/>
+  <path id="glasses_endpiece_2" d="m287.5,200l12.5,0" fill="none" stroke="#ffd700" stroke-width="5"/>
+ </g>
+</svg>

@@ -1,0 +1,633 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+/* General */
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: "Nanum Gothic Coding", Courier, monospace;
+  font-size: 15px;
+  color: rgba(245, 245, 245, .75);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #222;
+}
+
+section {
+  margin: 16em auto;
+  padding: 1em;
+  max-width: 40em;
+}
+section:last-child {
+  margin-bottom: 12em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  text-align: justify;
+  color: #f5f5f5;
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-weight: normal;
+}
+h5 {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+article {
+  position: relative;
+  padding: 1em;
+}
+article > :first-child {
+  margin-top: 0;
+}
+article > :last-child {
+  margin-bottom: 0;
+}
+article::before {
+  display: block;
+  content: "";
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  margin-top: -1em;
+
+  border-left: 1px solid rgba(245, 245, 245, .125);
+}
+
+article h3,
+article h4,
+article h5 {
+  margin-bottom: 15px;
+}
+article header {
+  margin-bottom: 2em;
+}
+article ul {
+  display: block;
+  margin: 0;
+  padding: 0.4em 0;
+  list-style: none;
+}
+article ul:not([class]) li {
+  position: relative;
+  padding: 0.2em 0 0.2em 1em;
+}
+article ul:not([class]) li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #f5f5f5;
+}
+
+a {
+  box-sizing: border-box;
+  outline: 0 !important;
+  text-decoration: none;
+  color: #185bd8;
+
+  transition: all .25s;
+}
+a:hover {
+  color: #185bd8;
+  background: rgba(24, 91, 216, .25);
+}
+a[target="_blank"]:not([title]):not([class])::after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  text-rendering: auto;
+  line-height: 1;
+  margin-left: 7.5px;
+
+  font-size: 0.8em;
+}
+
+img {
+  vertical-align: middle;
+}
+
+b {
+  color: #f5f5f5;
+  font-weight: normal;
+}
+
+/* Pre-defined styles */
+
+.phrase {
+  display: inline-block;
+}
+.preposition {
+  color: rgba(245, 245, 245, .25);
+  font-weight: normal;
+}
+
+.js-reserved {
+  color: #aaa;
+}
+
+.js-name {
+  color: #ffd700;
+}
+a.js-name:hover {
+  color: #ffd700 !important;
+  background-color: rgba(255, 215, 0, .25);
+}
+
+.js-declaration {
+  color: #fff;
+}
+
+.js-comment {
+  color: #090;
+}
+a.js-comment:hover {
+  color: #090 !important;
+  background-color: rgba(0, 153, 0, .25);
+}
+
+.content-card {
+  margin: 1em auto;
+  padding: 1.5em;
+  max-width: 40em;
+  position: relative;
+
+  background: rgba(245, 245, 245, .125);
+}
+.content-card::before {
+  display: none;
+}
+
+.content-card .external-link {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0;
+
+  width: 20px;
+  height: 20px;
+
+  color: rgba(245, 245, 245, .75);
+}
+.content-card .external-link:hover {
+  color: #185bd8;
+  background: none;
+}
+.content-card .external-link i {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.properties {
+  display: block;
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+
+  font-size: 0;
+}
+.properties li {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 50%;
+
+  font-size: 15px;
+}
+.properties li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+
+  color: #f5f5f5;
+}
+.properties li a:hover {
+  color: #185bd8;
+}
+@media screen and (max-width: 400px) {
+  .properties li {
+    display: block;
+  }
+}
+
+article .properties {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.properties i,
+.sns-links i {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  vertical-align: text-bottom;
+}
+
+.foldable {
+  border-bottom: 1px solid #f5f5f5;
+}
+.foldable .foldable-switch {
+  display: none;
+}
+.foldable .foldable-label {
+  display: block;
+  color: #f5f5f5;
+  padding: 0.4em;
+  border-top: 1px solid;
+}
+.foldable .foldable-label .label {
+  padding: 1em;
+}
+.foldable .foldable-label .fold-icon,
+.foldable .foldable-label .unfold-icon {
+  display: inline-block;
+  position: absolute;
+  transition: all 0.25s linear;
+}
+.foldable .foldable-label .fold-icon {
+  opacity: 0;
+}
+.foldable .foldable-label .unfold-icon {
+  opacity: 1;
+}
+.foldable .foldable-switch:checked ~ .foldable-label .fold-icon {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+.foldable .foldable-switch:checked ~ .foldable-label .unfold-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+.foldable .foldable-area {
+  padding-left: 0.5em;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s linear;
+}
+.foldable .foldable-switch:checked ~ .foldable-area {
+  max-height: 600px;
+}
+
+.stack {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  text-align: center;
+  font-size: 0;
+}
+.stack li {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #f5f5f5;
+  width: 90px;
+  height: 120px;
+  margin: 5px;
+  padding: 0;
+  overflow: hidden;
+  font-size: 15px;
+}
+.stack li * {
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+}
+.stack li a {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  text-align: center;
+  color: #f5f5f5;
+}
+.stack li a:hover {
+  background-color: rgba(245, 245, 245, .25);
+}
+.stack li i {
+  font-size: 84px;
+  line-height: 86px;
+}
+.stack li img {
+  width: 84px;
+  height: 84px;
+  padding: 1px 0;
+}
+.stack li span {
+  height: 28px;
+  line-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stack.small li {
+  width: 45px;
+  height: 60px;
+  margin: 3px;
+}
+.stack.small li * {
+  font-size: 11px;
+}
+.stack.small li i {
+  font-size: 39px;
+  line-height: 41px;
+}
+.stack.small li img {
+  width: 39px;
+  height: 39px;
+}
+.stack.small li span {
+  height: 13px;
+  line-height: 13px;
+}
+
+@media screen and (max-width: 400px) {
+  .stack li {
+    width: 45px;
+    height: 60px;
+    margin: 3px;
+  }
+  .stack li * {
+    font-size: 11px;
+  }
+  .stack li i {
+    font-size: 39px;
+    line-height: 41px;
+  }
+  .stack li img {
+    width: 39px;
+    height: 39px;
+  }
+  .stack li span {
+    height: 13px;
+    line-height: 13px;
+  }
+}
+
+.tags {
+  display: block;
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+
+  font-size: 0;
+}
+.tags li {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px;
+  margin: 0 0.5em 0.5em 0;
+  
+  font-size: 15px;
+  color: #f5f5f5;
+  border: 1px solid;
+}
+.tags li::before {
+  display: inline;
+  content: "\f292";
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  text-rendering: auto;
+  line-height: 1;
+  margin-right: 5px;
+
+  font-size: 0.8em;
+}
+
+/* Cover */
+
+#cover {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 12.5em;
+  margin: 0;
+}
+
+.title .upper-line,
+.title .lower-line {
+  display: inline-block;
+  white-space: nowrap;
+}
+.title .upper-line::after {
+  display: inline-block;
+  content: "        ";
+  white-space: pre;
+}
+.title .lower-line::before {
+  display: inline-block;
+  content: "  ";
+  white-space: pre;
+
+  box-sizing: border-box;
+  border-left: 1px solid rgba(245, 245, 245, .125);
+}
+
+.typing-effect .upper-line,
+.typing-effect .lower-line {
+  overflow: hidden;
+}
+.typing-effect .upper-line {
+  animation: type-upper 2.0s steps(20, end);
+}
+.typing-effect .lower-line {
+  opacity: 0;
+  animation: type-lower 2.3s steps(23, end) alternate;
+  animation-delay: 2.0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type-upper {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}
+@keyframes type-lower {
+  from {
+    width: 1em;
+    opacity: 1;
+  }
+  to {
+    width: 12.5em;
+    opacity: 1;
+  }
+}
+
+.next-page {
+  display: block;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  
+  font-size: 2em;
+  line-height: 1;
+  text-align: center;
+
+  color: rgba(245, 245, 245, .5);
+}
+.next-page:hover {
+  color: #f5f5f5;
+  background: initial;
+}
+.next-page i {
+  opacity: 0;
+
+  animation:
+    appear .25s,
+    float-up-down 2s ease-in-out infinite;
+  -webkit-animation-delay: 4.8s;
+  animation-delay: 4.8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-.5em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* About Me */
+
+.avatar {
+  display: block;
+  box-sizing: border-box;
+  margin: 1em auto;
+  border: 1px solid #f5f5f5;
+  width: 12em;
+  padding: 1em;
+
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+
+  transition: all .25s;
+}
+.avatar:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+/* Skills */
+
+#skills h3 {
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* Projects */
+
+/* Experience */
+
+/* Education */
+
+/* Contact */
+
+.phone-number {
+  display: inline;
+  position: relative;
+}
+.phone-number img {
+  height: 10px;
+}
+.phone-number .normal-image {
+  position: absolute;
+  top: 3.5px;
+  left: 0;
+  transition: opacity 0.25s;
+}
+a:hover .normal-image {
+  opacity: 0;
+}
+
+footer {
+  padding: 1.5em;
+  text-align: center;
+
+  background: #111;
+  color: #f5f5f5;
+}
+
+.sns-links {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.sns-links li {
+  display: inline-block;
+}
+.sns-links li a {
+  display: block;
+  box-sizing: content-box;
+  padding: 3px;
+
+  text-align: center;
+  font-size: 1.4em;
+
+  width: 1em;
+  height: 1em;
+}
